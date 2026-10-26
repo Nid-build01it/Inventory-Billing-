@@ -1,0 +1,52 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #D0DB97;
+    color: #181D27;
+}
+
+.sidebar {
+    --bs-offcanvas-width: 260px;
+    background-color: #254D32 !important;
+    color: #D0DB97;
+}
+.sidebar .logo {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 28px;
+    color: #D0DB97;
+}
+.sidebar a {
+    color: #D0DB97;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.sidebar a:hover { background: #3A7D44; }
+
+@media (min-width: 992px) {
+    .sidebar { width: 260px; flex-shrink: 0; min-height: 100vh; }
+}
+
+.content { min-width: 0; }
+.topbar { background: transparent; }
+
+.card-green {
+    background: #3A7D44;
+    color: #D0DB97;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main {
+    background: #254D32;
+    color: #D0DB97;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+}
+.btn-main:hover { background: #3A7D44; color: #fff; }

@@ -1,23 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Products</title>
-</head>
-<body>
-    <h1>Products</h1>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Stock</th>
-        </tr>
-        {% for product in products %}
-        <tr>
-            <td>{{ product.name }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.stock_quantity }}</td>
-        </tr>
-        {% endfor %}
+{% extends 'shop/base.html' %}
+
+{% block title %}Products{% endblock %}
+{% block page_title %}Products{% endblock %}
+
+{% block content %}
+<div class="card-green table-responsive">
+    <table class="table table-borderless mb-0" style="--bs-table-bg: transparent; --bs-table-color: #D0DB97;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price (Rs.)</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.stock_quantity }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3" class="text-center">No products yet</td></tr>
+            {% endfor %}
+        </tbody>
     </table>
-</body>
-</html>
+</div>
+{% endblock %}
