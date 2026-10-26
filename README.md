@@ -116,12 +116,6 @@ Design decisions:
 3. Every product is checked against available stock. If any check fails, nothing is saved and the user sees a clear message.
 4. If all checks pass, the invoice, its items and the stock reduction are saved in one **atomic transaction**, so either everything succeeds or nothing does.
 
-## AI usage disclosure
-
-I used Claude (by Anthropic) as a mentor in chat for planning, explaining Django concepts and suggesting code. I typed the code myself, tested it, and committed it to this repository step by step. I used a few AI-suggested snippets as starting points and I am able to explain how each part of the project works.
-
-_(Update this section at the end so it reflects exactly what was done, including any AI help with styling or debugging.)_
-
 ## Limitations and future improvements
 
 - No login system (single shop owner assumed)
